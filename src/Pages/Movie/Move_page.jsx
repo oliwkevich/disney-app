@@ -64,13 +64,13 @@ export const Move_page = (resp) => {
               </span>
             </button>
             <div
-              className="rounded-full border-2 border-white
-          flex items-center justify-center w-11 h-11 cursor-pointer bg-black/60"
+              className="rounded-full border-2 border-white hover:bg-white hover:text-black          
+              flex items-center justify-center w-11 h-11 cursor-pointer bg-black/60"
             >
-              <AiOutlinePlus className="h-6 w-6" />
+              <AiOutlinePlus className="h-6 w-6 " />
             </div>
             <div
-              className="rounded-full border-2 border-white
+              className="rounded-full border-2 border-white hover:bg-white hover:text-black
           flex items-center justify-center w-11 h-11 cursor-pointer bg-black/60"
             >
               <MdGroups className="h-6 w-6" />
