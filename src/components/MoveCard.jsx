@@ -13,11 +13,11 @@ export const MoveCard = ({movies}) => {
       transform hover:scale-105 transition duration-300"
     >
       <img
-        // src={
-        //   `${IMG_URL}${movie.backdrop_path || movie.poster_path}` ||
-        //   `${IMG_URL}${movie.poster_path}`
-        // }
-        src={`https://image.tmdb.org/t/p/w500/${movies.backdrop_path}`}
+        src={
+          `${IMG_URL}${movies.backdrop_path || movies.poster_path}` ||
+          `${IMG_URL}${movies.poster_path}`
+        }
+        // src={`https://image.tmdb.org/t/p/w500/${movies.backdrop_path}`}
         width={330}
         height={210}
         objectfit="cover"
