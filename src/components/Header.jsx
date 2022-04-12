@@ -52,7 +52,7 @@ export const Header = () => {
         onClick={() => navigate('/')}
       />
       {isAuth && (
-        <div className="hidden ml-10 md:flex items-center space-x-6">
+        <div className="hidden ml-10 lg:flex items-center space-x-6">
           <Link to='/' className="header-link group">
             <RiHome2Line className="h-4" />
             <span className="span">Home</span>
