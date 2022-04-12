@@ -7,7 +7,7 @@ import {
   RiMovieLine,
 } from "react-icons/ri";
 import { AiOutlinePlus, AiOutlineStar } from "react-icons/ai";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const [isAuth, setIsAuth] = React.useState(false);
@@ -49,13 +49,14 @@ export const Header = () => {
         width={80}
         height={80}
         className="cursor-pointer"
+        onClick={() => navigate('/')}
       />
       {isAuth && (
         <div className="hidden ml-10 md:flex items-center space-x-6">
-          <a className="header-link group">
+          <Link to='/' className="header-link group">
             <RiHome2Line className="h-4" />
             <span className="span">Home</span>
-          </a>
+          </Link>
           <a className="header-link group">
             <RiSearchLine className="h-4" />
             <span className="span">Search</span>

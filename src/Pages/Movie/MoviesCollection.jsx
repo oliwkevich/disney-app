@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { MoveCard } from "./MoveCard";
+import { MoveCard } from './MoveCard'
 
 export const MoviesCollection = () => {
   const [movies, setMovies] = useState([]);
@@ -13,8 +13,6 @@ export const MoviesCollection = () => {
     } = await axios.get(
       `${API_URL}/movie/popular?api_key=${API_KEY}&language=ru-RU&page=1`
     );
-
-    console.log("results", results);
     setMovies(results);
   };
 
@@ -33,5 +31,3 @@ export const MoviesCollection = () => {
     </div>
   );
 };
-
-//

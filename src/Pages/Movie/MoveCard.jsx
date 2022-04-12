@@ -1,8 +1,10 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export const MoveCard = ({movies}) => {
 
     const IMG_URL = 'https://image.tmdb.org/t/p/w500/'
+    const navigate = useNavigate();
 
   return (
     <div
@@ -17,11 +19,11 @@ export const MoveCard = ({movies}) => {
           `${IMG_URL}${movies.backdrop_path || movies.poster_path}` ||
           `${IMG_URL}${movies.poster_path}`
         }
-        // src={`https://image.tmdb.org/t/p/w500/${movies.backdrop_path}`}
         width={330}
         height={210}
         objectfit="cover"
         className="rounded-lg"
+        onClick={() => navigate(`/movie/${movies.id}`)}
       />
     </div>
   )

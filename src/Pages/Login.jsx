@@ -23,7 +23,7 @@ export const Login = () => {
   return (
     <div className="absolute top-[30%] left-[25%] md:left-[45%] my-32">
       <button
-        className="auth-btn flex justify-between"
+        className="auth-btn flex m-2"
         onClick={SignInWithFirebase}
       >
         Sign with Google
