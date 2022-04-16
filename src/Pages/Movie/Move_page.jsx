@@ -62,16 +62,10 @@ export const Move_page = (resp) => {
             </h4>
           </div>
           <div className="flex items-center space-x-3 md:space-x-5">
-            <button
-              className="text-xs md:text-base bg-[#f9f9f9] text-black flex items-center
-          justify-center py-2.5 px-6 rounded hover:bg-[#6c6c6c] "
-            >
-              <BsFillPlayFill className="h-6 md:h-8" />
-              <span className="font-medium tracking-wide">PLAY</span>
-            </button>
             <a
               target="_blank"
-              className="text-xs md:text-base bg-black/30 text-[#f9f9f9] border border-[#f9f9f9] flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]"
+              className="text-xs md:text-base bg-[#f9f9f9] text-black flex items-center
+              justify-center py-2.5 px-6 rounded hover:bg-[#6c6c6c] "
               href={VIDEO_URL}
             >
               <BsFillPlayFill className="h-6 md:h-8" />
