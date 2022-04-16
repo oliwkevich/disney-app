@@ -11,7 +11,6 @@ export const Movie = () => {
   return (
     <div>
       <MoviesCollection/>
-      {/* <Move_page/> */}
     </div>
   );
 };

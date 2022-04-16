@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import { BsFillPlayFill } from "react-icons/bs";
 import { AiOutlinePlus } from "react-icons/ai";
 import { MdGroups } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 export const Move_page = (resp) => {
   const [movie, setMovie] = useState({});
@@ -23,7 +23,11 @@ export const Move_page = (resp) => {
   const VIDEO_URL = `https://www.youtube.com/watch?v=${movie.videos?.results[index]?.key}`;
 
   useEffect(() => {
-    fetchMovies();
+    if (!window.localStorage.getItem("TokenAPI")) {
+      return <Navigate to="/" />;
+    } else {
+      fetchMovies();
+    }
   }, []);
 
   return (

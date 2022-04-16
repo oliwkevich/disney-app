@@ -4,9 +4,8 @@ import {
   RiHome2Line,
   RiSearchLine,
   RiMovie2Line,
-  RiMovieLine,
 } from "react-icons/ri";
-import { AiOutlinePlus, AiOutlineStar } from "react-icons/ai";
+import { AiOutlinePlus } from "react-icons/ai";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export const Header = () => {
@@ -30,7 +29,7 @@ export const Header = () => {
 
   const SignOut = () => {
     localStorage.removeItem("TokenAPI");
-    navigate('/login');
+    navigate('/');
   };
 
   return (
@@ -58,25 +57,13 @@ export const Header = () => {
             <span className="span">Home</span>
           </Link>
           <a className="header-link group">
-            <RiSearchLine className="h-4" />
-            <span className="span">Search</span>
-          </a>
-          <a className="header-link group">
             <AiOutlinePlus className="h-4" />
             <span className="span">Watchlist</span>
           </a>
-          <a className="header-link group">
-            <AiOutlineStar className="h-4" />
-            <span className="span">Originals</span>
-          </a>
-          <a className="header-link group">
+          <Link to='/movie' className="header-link group">
             <RiMovie2Line className="h-5" />
             <span className="span">Movies</span>
-          </a>
-          <a className="header-link group">
-            <RiMovieLine className="h-5" />
-            <span className="span">Series</span>
-          </a>
+          </Link>
         </div>
       )}
       {isAuth ? (

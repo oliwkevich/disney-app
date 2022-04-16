@@ -6,7 +6,7 @@ import { MoviesCollection } from "./Movie/MoviesCollection";
 
 export const Home = () => {
   if (!window.localStorage.getItem("TokenAPI")) {
-    return <Navigate to="/login" />;
+    return <Navigate to="/" />;
   }
 
   return (
