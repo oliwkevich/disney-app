@@ -3,14 +3,16 @@ import React from "react";
 import bg from "../assets/pictures/hero-background.jpg";
 import bg_pic_1 from "../assets/pictures/cta-logo-one.svg";
 import bg_pic_2 from "../assets/pictures/cta-logo-two.png";
-import { useNavigate, Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const MainHome = () => {
   const navigate = useNavigate();
   const handleClick = () => {
     if (!window.localStorage.getItem("TokenAPI")) {
-      return <Navigate to="/login" />;
+      console.log("work");
+      navigate("/login");
     } else {
+      console.log("work2");
       navigate("/home");
     }
   };
@@ -24,7 +26,7 @@ export const MainHome = () => {
           <img src={bg_pic_1} width="600" height="150" objectFit="contain" />
           <button
             onClick={handleClick}
-            className="bg-blue-600 uppercase text-xl tracking-wide font-extrabold py-4 px-6 w-full rounded hover:bg-[#0485ee]"
+            className="bg-blue-600 uppercase text-xl tracking-wide font-extrabold py-4 space-y-10 px-6 w-full rounded hover:bg-[#0485ee]"
           >
             СПРОБУВАТИ ЗАРАЗ
           </button>

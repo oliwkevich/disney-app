@@ -48,7 +48,7 @@ export const Header = () => {
         width={80}
         height={80}
         className="cursor-pointer"
-        onClick={() => navigate('/')}
+        onClick={() => navigate('/home')}
       />
       {isAuth && (
         <div className="hidden ml-10 lg:flex items-center space-x-6">
